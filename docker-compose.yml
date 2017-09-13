@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  divolte:
+    build: .
+    ports:
+      - 8290:8290
+    volumes:
+      - ./conf/divolte-collector.conf:/usr/local/conf/divolte-collector.conf
+      - ./conf/MyEventRecord.avsc:/usr/local/conf/MyEventRecord.avsc
+      - ./conf/mapping.groovy:/usr/local/conf/mapping.groovy

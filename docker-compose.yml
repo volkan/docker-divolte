@@ -9,3 +9,5 @@ services:
       - ./conf/divolte-collector.conf:/usr/local/conf/divolte-collector.conf
       - ./conf/MyEventRecord.avsc:/usr/local/conf/MyEventRecord.avsc
       - ./conf/mapping.groovy:/usr/local/conf/mapping.groovy
+    environment:
+      - DIVOLTE_KAFKA_BROKER_LIST=${DIVOLTE_KAFKA_BROKER_LIST}
